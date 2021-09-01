@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Verlet Physics Simulation</title>
+
+    <script src="src/p5.js"></script>
+    <script src="src/p5.sound.min.js"></script>
+
+    <script src="src/sketch-ui.js"></script>
+    <script src="src/rigid-bodies.js"></script>
+
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="src/style.css">
+</head>
+
+<body>
+	<div class="container">
+		<div id="sketch">
+			<a class="github-link" href="https://github.com/markjoshua12/verlet-physics-sim">
+				<i class="fa fa-github"></i>
+			</a>
+			<div class="settings-container">
+				<a id="container-hider" href="#">Show Controls</a>
+				<div class="inside">
+					<div class="column">
+						<label style="margin-bottom: 6px;">Tool Type</label>
+						<button id="" class="settings-btn tool-type-btn">Drag</button>
+						<button id="" class="settings-btn tool-type-btn">Create Triange</button>
+						<button id="" class="settings-btn tool-type-btn">Create Square</button>
+						<label for="wind-range">Wind</label>
+						<div>
+							<input id="wind-range" class="settings-range" type="range" min="-1" max="1" step="0.1">
+							<input id="wind-input" class="settings-input" type="number">
+						</div>
+						<label for="gravity-range">Gravity</label>
+						<div>
+							<input id="gravity-range" class="settings-range" type="range" min="-1" max="1" step="0.1">
+							<input id="gravity-input" class="settings-input" type="number">
+						</div>
+						<label for="tear-str-range">Tear Strength</label>
+						<div>
+							<input id="tear-str-range" class="settings-range" type="range" min="0" max="1000" step="1">
+							<input id="tear-str-input" class="settings-input" type="number" min="0" max="1000">
+						</div>
+						<br />
+						<button id="draw-shape-fill" class="settings-btn">Draw Shape Fill</button>
+						<button id="draw-points" class="settings-btn">Draw Points</button>
+						<button id="show-debug" class="settings-btn">Show Debug</button>
+					</div>
+					<div class="column">
+						<label for="cloth-width-range">Cloth Width</label>
+						<div>
+							<input id="cloth-width-range" class="settings-range" type="range" min="1" max="100" step="1">
+							<input id="cloth-width-input" class="settings-input" type="number" min="1" max="100">
+						</div>
+						<label for="cloth-height-range">Cloth Height</label>
+						<div>
+							<input id="cloth-height-range" class="settings-range" type="range" min="1" max="100" step="1">
+							<input id="cloth-height-input" class="settings-input" type="number" min="1" max="100">
+						</div>
+						<label for="attached-points-range">Attach Points Every</label>
+						<div>
+							<input id="attached-points-range" class="settings-range" type="range" min="1" max="100" step="1">
+							<input id="attached-points-input" class="settings-input" type="number" min="1" max="100">
+						</div>
+						<label for="constraint-length-range">Constraint Length</label>
+						<div>
+							<input id="constraint-length-range" class="settings-range" type="range" min="1" max="1000" step="1">
+							<input id="constraint-length-input" class="settings-input" type="number" min="1" max="1000">
+						</div>
+						<label for="cloth-spacing-range">Constraint Spacing</label>
+						<div>
+							<input id="cloth-spacing-range" class="settings-range" type="range" min="1" max="100" step="1">
+							<input id="cloth-spacing-input" class="settings-input" type="number" min="1" max="100">
+						</div>
+						<br />
+						<button id="pause" class="settings-btn">Pause</button>
+						<button id="reset" class="settings-btn">Reset</button>
+						<button id="can-tear" class="settings-btn">Can Tear</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    <script src="src/sketch.js"></script>
+</body>
+</html>
